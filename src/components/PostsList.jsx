@@ -5,24 +5,12 @@ import classes from "./PostsList.module.css";
 import Modal from "./Modal";
 
 function PostList(props) {
-    const [ enteredBody, setEnteredBody ] = useState('');
-    const [ enteredAuthor, setEnteredAuthor ] = useState('');
-
-    function bodyChangeHandler(event) {
-        setEnteredBody(event.target.value);
-    }
-
-    function authorChangeHandler(event) {
-        setEnteredAuthor(event.target.value);
-    }
-
     return (
         <>
             {props.isPosting && (
-                <Modal onClose={onStopPosting}>
+                <Modal onClose={props.onStopPosting}>
                     <NewPost 
-                        onBodyChange={bodyChangeHandler}
-                        onAuthorChange={authorChangeHandler}
+                        onCancel={props.onStopPosting}
                     />
                 </Modal>
             )}
@@ -32,13 +20,9 @@ function PostList(props) {
                     author={enteredAuthor}
                     body={enteredBody}
                 />
-                <Post 
-                    author={enteredAuthor}
-                    body={enteredBody}
-                />
             </ul>
-        </>
-    );
+        </>  
+    );  
 }
 
 export default PostList;

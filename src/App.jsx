@@ -4,7 +4,7 @@ import MainHeader from './components/MainHeader'
 import PostList from './components/PostsList'
 
 function App() {
-  const [ modalIsVisible, setModalIsVisible ] = useState(true);
+  const [ modalIsVisible, setModalIsVisible ] = useState(false);
 
   function hideModalHandler() {
     setModalIsVisible(false);
@@ -20,8 +20,8 @@ function App() {
 
       <main>
         <PostList 
-          isPosting={modalIsVisible} 
-          onStopPosting={hideModalHandler} 
+          isPosting={modalIsVisible}
+          onStopPosting={hideModalHandler}
         />
       </main>
     </>
