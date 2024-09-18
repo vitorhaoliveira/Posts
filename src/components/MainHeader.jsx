@@ -6,13 +6,13 @@ function MainHeader(props) {
         <header className={classes.header} >
             <h1 className={classes.logo}>
                 <MdMessage />
-                React Poster
+                Posts
             </h1>
 
             <p>
                 <button className={classes.button} onClick={props.createPost} >
                     <MdPostAdd size={18} />
-                    New Post
+                    Novo Post
                 </button>
             </p>
         </header>

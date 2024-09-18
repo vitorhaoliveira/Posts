@@ -14,7 +14,13 @@ function NewPost(props) {
     }
 
     function submitHandler(event) {
-        
+        event.preventDefault();
+        const postData = {
+            body: enteredBody,
+            author: enteredAuthor
+        }
+        props.onAddPost(postData);
+        props.onCancel();
     }
 
     return (
@@ -32,10 +38,13 @@ function NewPost(props) {
                     type="button" 
                     onClick={props.onCancel}
                     className={classes.button}
-                >Cancel</button>
-                <button
-                    className={classes.button}
-                >Submit</button>
+                >
+                    Cancelar
+                </button>
+
+                <button className={classes.button}>
+                    Enviar
+                </button>
             </p>
         </form>
     );
