@@ -1,7 +1,7 @@
 import classes from './MainHeader.module.css';
 import { MdPostAdd, MdMessage } from 'react-icons/md';
 
-function MainHeader(props) {
+function MainHeader() {
     return (
         <header className={classes.header} >
             <h1 className={classes.logo}>
@@ -10,10 +10,10 @@ function MainHeader(props) {
             </h1>
 
             <p>
-                <button className={classes.button} onClick={props.createPost} >
+                <a href='/create-post' className={classes.button} >
                     <MdPostAdd size={18} />
                     Novo Post
-                </button>
+                </a>
             </p>
         </header>
     )

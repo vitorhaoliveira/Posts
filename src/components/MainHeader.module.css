@@ -29,6 +29,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #242424;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .button:hover {
