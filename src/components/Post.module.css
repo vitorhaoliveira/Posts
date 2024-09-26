@@ -8,6 +8,10 @@
     width: 20rem;
 }
 
+.post a {
+  text-decoration: none;
+}
+
 .author {
     font-size: 1.5rem;
     font-weight: bold;

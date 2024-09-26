@@ -12,9 +12,10 @@ function PostList() {
                     {posts.map((post) => {
                         return(
                             <Post 
-                                key={post.body}
+                                key={post.id}
                                 author={post.author}
                                 body={post.body}
+                                id={post.id}
                             />
                         )
                     })}
@@ -25,12 +26,6 @@ function PostList() {
                     <h2>Não existem posts.</h2>
                 </div>
             )}
-            {/* {isFetching && (
-                <div className={classes.loadingContainer}>
-                    <div className={classes.spinner} />
-                    <p>Loading posts...</p>
-                </div>
-            )} */}
         </>  
     );  
 }
