@@ -26,7 +26,7 @@
     border: none;
     cursor: pointer;
     background-color: beige;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, transform 0.3s ease;
     color: #242424;
     font-weight: bold;
     text-decoration: none;
@@ -34,4 +34,5 @@
 
 .button:hover {
     background-color: rgb(230, 230, 206);
+    transform: scale(1.05);
 } 

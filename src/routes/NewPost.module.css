@@ -35,12 +35,12 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 1rem;
+    padding: .2rem;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     background-color: #242424;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, transform 0.3s ease;
     color: beige;
     font-weight: bold;
     width: 6rem;
@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -63,9 +63,6 @@
 
 .button:hover {
     background-color: rgb(51, 51, 51);
+    transform: scale(1.05);
 } 
-
-.cancelButton:hover {
-    background-color: rgb(250, 250, 233);
-}
 

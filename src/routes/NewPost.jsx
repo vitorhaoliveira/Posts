@@ -35,7 +35,7 @@ function NewPost() {
 
 export default NewPost;
 
-export async function action({request}) {
+export async function action({ request }) {
     const formData = await request.formData();
     const postData = Object.fromEntries(formData);
     await fetch('https://postsbd.onrender.com/posts', {

@@ -33,7 +33,7 @@ function PostDetails() {
 
 export default PostDetails;
 
-export async function loader({ params }) {
+export async function loader({ params }) {  
   const response = await fetch('https://postsbd.onrender.com/posts/' + params.id)
   const resData = await response.json();
   return resData.post;  
